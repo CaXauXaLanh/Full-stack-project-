@@ -3,9 +3,9 @@ import bodyParser from "body-parser";
 import viewEngine from "./config/viewEngine";
 import initWebRoutes from "./routes/web";
 import connectDB from "./config/connectDB";
-require('dotenv').config()
+require("dotenv").config();
 
-let PORT = process.env.PORT || 8080
+let PORT = process.env.PORT || 8080;
 let app = express();
 
 app.use(bodyParser.json());
@@ -18,4 +18,4 @@ connectDB();
 
 app.listen(PORT, () => {
     console.log("listening on port " + PORT);
-})
+});
